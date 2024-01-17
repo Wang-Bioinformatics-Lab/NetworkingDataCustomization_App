@@ -45,3 +45,12 @@ except:
 all_clusters_metadata_df = clusterinfo_df.merge(metadata_df, on="filename")
 
 st.write(all_clusters_metadata_df)
+
+# Provide download link for dataframe
+st.download_button(
+   "Press to Download",
+    all_clusters_metadata_df.to_csv(index=False).encode('utf-8'),
+   "file.csv",
+   "text/csv",
+   key='download-csv'
+)
