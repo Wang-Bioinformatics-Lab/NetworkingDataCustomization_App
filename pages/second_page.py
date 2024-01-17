@@ -44,3 +44,4 @@ except:
 # Merging it all together
 all_clusters_metadata_df = clusterinfo_df.merge(metadata_df, on="filename")
 
+st.write(all_clusters_metadata_df)
